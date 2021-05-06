@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{multirow}
+\setlength\parindent{0pt}
+\usepackage{geometry}
+\usepackage{longtable}
+\usepackage{float}
+\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm}
+
+\title{Report for Re-irradiation for NPC}
+\author{Jie Su (Susie) Dr. Wei Xu}
+\begin{document}
+\maketitle
+
+
+<<>>=
+require(reportRx) # Load package
+require(survival) # Need to access dataframe lung
+require(xtable) #Dont strictly need this but would need if we want to print dataframes outside of the reportRx functions 
+require(knitr)
+require(ggplot2)
+require(pscl)
+require(lmtest)
+require(nonnest2)
+@
+
+<<>>=
+
+datta = read.table("C:/Users/Faizan/OneDrive/OneDrive/Survival Analysis/Survival_HW2/survivalD2.txt")
+
+@
+
+
+
+
+ <<,include=FALSE>>=
+ 
+  makedocx("C:\\Users\\Faizan\\OneDrive\\OneDrive\\Catagorical_Data\\HW2\\",
+           "survivalHW2",
+           "C:\\Users\\Faizan\\OneDrive\\OneDrive\\Rreportingpackagefiles\\Pandoc",
+           "C:\\Users\\Faizan\\OneDrive\\OneDrive\\Rreportingpackagefiles\\ImageMagick")
+
+
+@
+
+\end{document}
